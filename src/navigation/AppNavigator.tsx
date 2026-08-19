@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/homeScreen/HomeScreen';
@@ -19,7 +19,7 @@ export default function AppNavigator() {
 
   return (
     <NavigationContainer>
-      <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
+      <SafeAreaView style={styles.safeArea} edges={Platform.OS === 'android' ? ['top', 'bottom'] : ['bottom']}>
         <Tab.Navigator
           tabBar={(props) => <CustomTabBar {...props} />}
           screenOptions={{

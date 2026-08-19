@@ -4,4 +4,5 @@ export const Icons = Object.freeze({
   settings: require("./setting.png"),
   moon: require("./moon.png"),
   sun: require("./sun.png"),
+  gallery: require("./gallery.png"),
 });

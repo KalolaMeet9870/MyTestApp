@@ -35,7 +35,7 @@ export const commonColors = {
 
 export const lightTheme: ThemeColors = {
   ...commonColors,
-  background: "#F8F9FA",
+  background: "#ffffff",
   text: "#202124",
   textSecondary: "#5F6368",
   border: "#DADCE0",
@@ -54,7 +54,7 @@ export const lightTheme: ThemeColors = {
 
 export const darkTheme: ThemeColors = {
   ...commonColors,
-  background: "#121212",
+  background: "#000000",
   text: "#E8EAED",
   textSecondary: "#9AA0A6",
   border: "#3C4043",
@@ -64,7 +64,7 @@ export const darkTheme: ThemeColors = {
   tabActive: "#8AB4F8", // lighter blue for dark mode
   tabInactive: "#9AA0A6",
   tabBorder: "rgba(255, 255, 255, 0.05)",
-  cardBackground: "#1E1E1E",
+  cardBackground: "#000000",
   inputBackground: "#2D2D2D",
   inputPlaceholder: "#80868B",
   divider: "#3C4043",

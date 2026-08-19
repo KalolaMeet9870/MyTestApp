@@ -6,7 +6,7 @@ import { getStyles } from './CustomTabBarStyle';
 import { useCustomTabBarController } from './CustomTabBarController';
 import { Routes } from '../../constants';
 
-export default function CustomTabBar({ state, descriptors, navigation }: any) {
+export default function CustomTabBar({ state, _descriptors, navigation }: any) {
   const { handleTabPress } = useCustomTabBarController(navigation);
   const { theme } = useTheme();
   const styles = getStyles(theme);

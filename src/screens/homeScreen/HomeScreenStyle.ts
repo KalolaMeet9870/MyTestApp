@@ -1,16 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from '../../theme/Colors';
+import { ThemeColors } from '../../theme';
+import { moderateScale } from '../../theme';
 
-export const styles = StyleSheet.create({
+export const getStyles = (theme: ThemeColors) => StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.background,
+    backgroundColor: theme.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: 'bold',
-    color: Colors.text,
+    color: theme.text,
   },
 });

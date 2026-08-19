@@ -21,6 +21,9 @@ export interface ThemeColors {
   inputPlaceholder: string;
   divider: string;
   isDark: boolean;
+  statusOnline: string;
+  statusBusy: string;
+  statusOffline: string;
 }
 
 export const commonColors = {
@@ -31,6 +34,9 @@ export const commonColors = {
   warning: "#FBBC05",
   white: "#FFFFFF",
   black: "#000000",
+  statusOnline: "#34A853",
+  statusBusy: "#EA4335",
+  statusOffline: "#9AA0A6",
 };
 
 export const lightTheme: ThemeColors = {

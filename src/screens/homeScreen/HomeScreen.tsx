@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View, ScrollView, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
+import { Text, View, ScrollView, ActivityIndicator, Image } from 'react-native';
 import { getStyles } from './HomeScreenStyle';
 import { useHomeScreenController } from './HomeScreenController';
 import { useTheme } from '../../theme';
 import Strings from '../../constants';
 import { Icons } from '../../assets';
+import { CustomButton } from '../../components/custom-button';
 
 export default function HomeScreen() {
   const {
@@ -60,13 +61,12 @@ export default function HomeScreen() {
             <Text style={styles.permissionWarningText}>
               {Strings.PERMISSION_REQUIRED}
             </Text>
-            <TouchableOpacity
-              style={styles.permissionButton}
-              onPress={handleRequestPermission}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.permissionButtonText}>{Strings.GRANT_PERMISSION}</Text>
-            </TouchableOpacity>
+            <CustomButton
+              buttonText={Strings.GRANT_PERMISSION}
+              pressEvent={handleRequestPermission}
+              buttonStyle={styles.permissionButton}
+              textStyle={styles.permissionButtonText}
+            />
           </View>
         )}
       </View>
@@ -86,13 +86,12 @@ export default function HomeScreen() {
           )}
         </View>
 
-        <TouchableOpacity
-          style={styles.photosButton}
-          onPress={handleSelectPhoto}
-          activeOpacity={0.8}
-        >
-          <Text style={styles.photosButtonText}>{Strings.SELECT_PHOTO}</Text>
-        </TouchableOpacity>
+        <CustomButton
+          buttonText={Strings.SELECT_PHOTO}
+          pressEvent={handleSelectPhoto}
+          buttonStyle={styles.photosButton}
+          textStyle={styles.photosButtonText}
+        />
 
         {photosPermissionStatus === 'denied' && (
           <View style={styles.permissionWarningContainer}>
